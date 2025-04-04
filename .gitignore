@@ -1,0 +1,18 @@
+ 
+# Hệ điều hành
+######################
+.DS_Store
+Thumbs.db
+
+# Thư mục build & output
+######################
+bin/
+obj/
+out/
+
+# User-specific files
+######################
+*.user
+*.suo
+*.userosscache
+*.sln.docstates

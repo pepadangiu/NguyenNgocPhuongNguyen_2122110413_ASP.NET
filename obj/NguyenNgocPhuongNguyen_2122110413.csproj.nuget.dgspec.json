@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj": {}
+    "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj": {}
   },
   "projects": {
-    "D:\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj": {
+    "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj",
+        "projectUniqueName": "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj",
         "projectName": "NguyenNgocPhuongNguyen_2122110413",
-        "projectPath": "D:\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj",
+        "projectPath": "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413.csproj",
         "packagesPath": "C:\\Users\\pepaxjnkkk\\.nuget\\packages\\",
-        "outputPath": "D:\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\obj\\",
+        "outputPath": "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pepaxjnkkk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
