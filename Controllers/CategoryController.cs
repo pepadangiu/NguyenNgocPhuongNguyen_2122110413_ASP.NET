@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NguyenNgocPhuongNguyen_2122110413.Data;
+using NguyenNgocPhuongNguyen_2122110413.DTOs.Category;
+using NguyenNgocPhuongNguyen_2122110413.Mapper;
 using NguyenNgocPhuongNguyen_2122110413.Model;
 
 namespace NguyenNgocPhuongNguyen_2122110413.Controllers
@@ -36,24 +38,32 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 
         // POST: api/category
         [HttpPost]
-        public async Task<IActionResult> Create(Category category)
+        public async Task<IActionResult> Create([FromBody] CategoryCreateDTO dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var category = CategoryMapper.ToCategory(dto);
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
+
             return Ok(category);
         }
 
         // PUT: api/category/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Category updatedCategory)
+        public async Task<IActionResult> Update(int id, [FromBody] CategoryUpdateDTO dto)
         {
+            if (id != dto.Id)
+                return BadRequest("ID không khớp.");
+
             var category = await _context.Categories.FindAsync(id);
             if (category == null)
                 return NotFound();
 
-            category.Name = updatedCategory.Name;
-
+            CategoryMapper.UpdateCategory(category, dto);
             await _context.SaveChangesAsync();
+
             return Ok(category);
         }
 
@@ -65,7 +75,6 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
             if (category == null)
                 return NotFound();
 
-            // Nếu muốn xoá mềm thì có thể thêm trường DeletedAt, ở đây là xoá thật
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
 
