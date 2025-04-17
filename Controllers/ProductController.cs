@@ -9,6 +9,7 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -18,26 +19,31 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
             _context = context;
         }
 
-        // GET: api/Product
+        // GET: api/product
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetAll()
         {
-            return await _context.Products.Include(p => p.Category).ToListAsync();
+            var products = await _context.Products
+                                         .Include(p => p.Category)
+                                         .ToListAsync();
+            return Ok(products);
         }
 
-        // GET: api/Product/5
+        // GET: api/product/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetById(int id)
         {
-            var product = await _context.Products.Include(p => p.Category)
-                                                 .FirstOrDefaultAsync(p => p.Id == id);
+            var product = await _context.Products
+                                        .Include(p => p.Category)
+                                        .FirstOrDefaultAsync(p => p.Id == id);
+
             if (product == null)
                 return NotFound();
 
-            return product;
+            return Ok(product);
         }
 
-        // POST: api/Product
+        // POST: api/product
         [HttpPost]
         public async Task<ActionResult<Product>> Create([FromBody] ProductCreateDTO productDto)
         {
@@ -59,10 +65,7 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<Product>> Update(int id, [FromBody] ProductUpdateDTO dto)
         {
-            if (id != dto.Id)
-            {
-                return BadRequest("ID trong URL không khớp với ID trong dữ liệu.");
-            }
+
 
             var product = await _context.Products.FindAsync(id);
             if (product == null || product.DeletedAt != null)
@@ -88,8 +91,7 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Đã xoá vĩnh viễn sản phẩm." });
+            return Ok(new { message = "Đã xoá sản phẩm." });
         }
     }
 }

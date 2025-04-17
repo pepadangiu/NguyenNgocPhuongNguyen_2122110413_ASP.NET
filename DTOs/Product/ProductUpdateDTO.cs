@@ -1,22 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿
 namespace NguyenNgocPhuongNguyen_2122110413.DTOs.Product
 {
     public class ProductUpdateDTO
     {
-        [Required]
-        public int Id { get; set; }
-
-        [Required]
         public string Name { get; set; }
-
-        [Range(0, double.MaxValue, ErrorMessage = "Giá phải lớn hơn hoặc bằng 0")]
+        public string Description { get; set; }
         public decimal Price { get; set; }
-
-        [Required]
+        public int StockQuantity { get; set; }
+        public string ImageUrl { get; set; }
+        public string Brand { get; set; }
+        public bool IsAvailable { get; set; }
+        public double Rating { get; set; }
         public string UserUpdate { get; set; }
-
-        [Required]
         public int CategoryId { get; set; }
     }
 }
