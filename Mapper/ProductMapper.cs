@@ -19,9 +19,9 @@ namespace NguyenNgocPhuongNguyen_2122110413.Mapper
                     Brand = dto.Brand,
                     IsAvailable = dto.IsAvailable,
                     Rating = dto.Rating,
-                    UserCreate = dto.UserCreate ?? "kimanh",
-                    UserUpdate = "kimanh",
-                    UserDelete = "kimanh",
+                    UserCreate = dto.UserCreate ?? "pnguyn",
+                    UserUpdate = "pnguyn",
+                    UserDelete = "pnguyn",
                     CreatedAt = DateTime.Now,
                     CategoryId = dto.CategoryId
                 };
@@ -39,8 +39,8 @@ namespace NguyenNgocPhuongNguyen_2122110413.Mapper
                 product.IsAvailable = dto.IsAvailable;
                 product.Rating = dto.Rating;
                 product.CategoryId = dto.CategoryId;
-                product.UserUpdate = dto.UserUpdate ?? "kimanh";
-                product.UserDelete = "kimanh"; // Có thể bỏ nếu không dùng
+                product.UserUpdate = dto.UserUpdate ?? "pnguyn";
+                product.UserDelete = "pnguyn"; // Có thể bỏ nếu không dùng
                 product.UpdatedAt = DateTime.Now;
             }
 

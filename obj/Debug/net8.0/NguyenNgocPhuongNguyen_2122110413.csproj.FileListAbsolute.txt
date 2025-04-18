@@ -336,3 +336,5 @@ D:\ASP.NET\NguyenNgocPhuongNguyen_2122110413\NguyenNgocPhuongNguyen_2122110413\o
 D:\ASP.NET\NguyenNgocPhuongNguyen_2122110413\NguyenNgocPhuongNguyen_2122110413\obj\Debug\net8.0\NguyenNgocPhuongNguyen_2122110413.pdb
 D:\ASP.NET\NguyenNgocPhuongNguyen_2122110413\NguyenNgocPhuongNguyen_2122110413\obj\Debug\net8.0\NguyenNgocPhuongNguyen_2122110413.genruntimeconfig.cache
 D:\ASP.NET\NguyenNgocPhuongNguyen_2122110413\NguyenNgocPhuongNguyen_2122110413\obj\Debug\net8.0\ref\NguyenNgocPhuongNguyen_2122110413.dll
+D:\ASP.NET\NguyenNgocPhuongNguyen_2122110413\NguyenNgocPhuongNguyen_2122110413\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ASP.NET\NguyenNgocPhuongNguyen_2122110413\NguyenNgocPhuongNguyen_2122110413\bin\Debug\net8.0\NguyenNgocPhuongNguyen_2122110413.staticwebassets.runtime.json

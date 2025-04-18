@@ -7,7 +7,6 @@ using NguyenNgocPhuongNguyen_2122110413.Model;
 
 namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductController : ControllerBase

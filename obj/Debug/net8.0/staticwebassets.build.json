@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "/KxHbKjOy22X9NR+bX6NRSaXbCYvukNarKQC/99QeIo=",
+  "Hash": "LwUEV0MeAa2tZ+guSKpSW/NdxQjQ/+4eJ504PDmYfsA=",
   "Source": "NguyenNgocPhuongNguyen_2122110413",
   "BasePath": "_content/NguyenNgocPhuongNguyen_2122110413",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "NguyenNgocPhuongNguyen_2122110413\\wwwroot",
+      "Source": "NguyenNgocPhuongNguyen_2122110413",
+      "ContentRoot": "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\wwwroot\\",
+      "BasePath": "_content/NguyenNgocPhuongNguyen_2122110413",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\wwwroot\\images\\0akcovwf.apo.jpg",
+      "SourceId": "NguyenNgocPhuongNguyen_2122110413",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET\\NguyenNgocPhuongNguyen_2122110413\\NguyenNgocPhuongNguyen_2122110413\\wwwroot\\",
+      "BasePath": "_content/NguyenNgocPhuongNguyen_2122110413",
+      "RelativePath": "images/0akcovwf.apo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\0akcovwf.apo.jpg"
+    }
+  ]
 }

@@ -1,5 +1,100 @@
 [
   {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.AuthController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.AuthController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Auth/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedUser",
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.AuthController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Auth/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "api/Auth/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.CategoryController",
     "Method": "GetAll",
     "RelativePath": "api/Category",
@@ -99,226 +194,123 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "GetAll",
-    "RelativePath": "api/Product",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[NguyenNgocPhuongNguyen_2122110413.Model.Product, NguyenNgocPhuongNguyen_2122110413, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "GetAll",
-    "RelativePath": "api/Product",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[NguyenNgocPhuongNguyen_2122110413.Model.Product, NguyenNgocPhuongNguyen_2122110413, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "Create",
-    "RelativePath": "api/Product",
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ImageUploadController",
+    "Method": "UploadImage",
+    "RelativePath": "api/ImageUpload/upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productDto",
-        "Type": "NguyenNgocPhuongNguyen_2122110413.DTOs.Product.ProductCreateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "Create",
-    "RelativePath": "api/Product",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "productDto",
-        "Type": "NguyenNgocPhuongNguyen_2122110413.DTOs.Product.ProductCreateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "GetById",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "GetById",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "Update",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "NguyenNgocPhuongNguyen_2122110413.DTOs.Product.ProductUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "Update",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "NguyenNgocPhuongNguyen_2122110413.DTOs.Product.ProductUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
-    "Method": "Delete",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
+    "Method": "GetAll",
+    "RelativePath": "api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NguyenNgocPhuongNguyen_2122110413.Model.Product, NguyenNgocPhuongNguyen_2122110413, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
+    "Method": "Create",
+    "RelativePath": "api/Product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productDto",
+        "Type": "NguyenNgocPhuongNguyen_2122110413.DTOs.Product.ProductCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
+    "Method": "GetById",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
+    "Method": "Update",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "NguyenNgocPhuongNguyen_2122110413.DTOs.Product.ProductUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NguyenNgocPhuongNguyen_2122110413.Model.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "NguyenNgocPhuongNguyen_2122110413.Controllers.ProductController",
