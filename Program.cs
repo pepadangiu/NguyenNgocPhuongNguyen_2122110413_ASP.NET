@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
         policy => policy
-            .WithOrigins("http://localhost:3000") // Địa chỉ frontend
+            .WithOrigins("http://localhost:5173", "http://localhost:3000") // Địa chỉ frontend
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials() // nếu dùng cookie/token

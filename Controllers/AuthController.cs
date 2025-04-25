@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using NguyenNgocPhuongNguyen_2122110413.DTOs.User;
 
 namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 {
@@ -23,16 +24,17 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] User request)
+        public async Task<IActionResult> Register([FromBody] CreateUserDto request)
         {
             if (await _context.Users.AnyAsync(u => u.Username == request.Username))
-                return BadRequest("Username already exists");
+                return BadRequest("Email already exists");
 
             var user = new User
             {
                 Username = request.Username,
                 Password = ComputeSha256Hash(request.Password),
-                Role = string.IsNullOrEmpty(request.Role) ? "User" : request.Role 
+                Email = request.Email,
+                Role =  "User" 
             };
 
             _context.Users.Add(user);
@@ -43,9 +45,9 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] User request)
+        public async Task<IActionResult> Login([FromBody] LoginDto request)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == request.Email);
             if (user == null || user.Password != ComputeSha256Hash(request.Password))
                 return Unauthorized("Invalid username or password");
 
@@ -71,10 +73,19 @@ namespace NguyenNgocPhuongNguyen_2122110413.Controllers
 
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
-            return Ok(new { token = jwt });
+            return Ok(new
+            {
+                token = jwt,
+                user = new
+                {
+                    id = user.Id,
+                    username = user.Username,
+                    email = user.Email,
+                    role = user.Role,
+                }
+            });
         }
         [HttpGet("users")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _context.Users

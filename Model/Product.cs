@@ -21,7 +21,6 @@ namespace NguyenNgocPhuongNguyen_2122110413.Model
 
         public bool IsAvailable { get; set; } // 🆕 Có sẵn hay không
 
-        public double Rating { get; set; } // 🆕 Đánh giá (0 - 5)
 
         public DateTime CreatedAt { get; set; }
 

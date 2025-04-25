@@ -15,11 +15,8 @@ namespace NguyenNgocPhuongNguyen_2122110413.Mapper
                     Description = dto.Description,
                     Price = dto.Price,
                     StockQuantity = dto.StockQuantity,
-                    ImageUrl = dto.ImageUrl,
                     Brand = dto.Brand,
                     IsAvailable = dto.IsAvailable,
-                    Rating = dto.Rating,
-                    UserCreate = dto.UserCreate ?? "pnguyn",
                     UserUpdate = "pnguyn",
                     UserDelete = "pnguyn",
                     CreatedAt = DateTime.Now,
@@ -34,12 +31,9 @@ namespace NguyenNgocPhuongNguyen_2122110413.Mapper
                 product.Description = dto.Description;
                 product.Price = dto.Price;
                 product.StockQuantity = dto.StockQuantity;
-                product.ImageUrl = dto.ImageUrl;
                 product.Brand = dto.Brand;
                 product.IsAvailable = dto.IsAvailable;
-                product.Rating = dto.Rating;
                 product.CategoryId = dto.CategoryId;
-                product.UserUpdate = dto.UserUpdate ?? "pnguyn";
                 product.UserDelete = "pnguyn"; // Có thể bỏ nếu không dùng
                 product.UpdatedAt = DateTime.Now;
             }
